@@ -140,6 +140,13 @@ if __name__ == '__main__':
             if transaction:
                 block_chain.pending_transactions.append(transaction)
 
+        # 模擬惡意竄改紀錄
+        # for i, block in enumerate(block_chain.chain):
+        #     for j, transaction in enumerate(block.transactions):
+        #         block_chain.chain[i].transactions[j].receiver = 'client_C'
+        
+        # block_chain.verify_blockchain()
+                
         print('========== transactions in blocks ==========')
         for i, block in enumerate(block_chain.chain):
             print(f'Block {i}:')
